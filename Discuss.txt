@@ -1,0 +1,37 @@
+Mô tả: Xây dựng 1 trình quản lý thư viện
+Ý tưởng:
+    - Màn hih chọn ban đầu sẽ chọn role (lib manager,member)
+        - Lib mmanager sẽ được thực hiện những nhiệm vụ : kiểm tra kho sách, thêm sách va ++ date;
+        - Member được search sách, request mượn sách, trả sách, kiểm tra thông tin tài khoản cua mình.
+    - 1 class "General" sẽ dùng để quản lý chung:
+	- Attribute:
+		+ 1 hashmap BookShelf <ID,BookInShelf> để tiện truy xuất thông tin sách
+		+ 1 hashmap Account_Checking<ID,pass>
+		+ 1 hashmap Account<ID,Account>
+	- Method:
+		-Select role
+			+ Lib manager:
+				+ Check
+				+ Add
+				+ ++date (sẽ hiện luôn thông báo xem những cuốn sách nào, ai mượn bị quá hạn);
+			+ Member:
+				+ check own Account infor
+				+ search book
+				+ trả sách
+    - Class BookInShelf:
+ 	-Attribute: 
+		+ID (String)
+		+Name (String)
+		+Location (Physical) (String)
+		+maximumRentTime (int)
+		+available (boolean)
+    - Class RentedBook:
+	- Attribute:
+		+ID(String)
+		+Name(String)
+		+CountDownRentTime(int) (--CountDown when ++ date)
+    - Class Member:
+	-Attribute: 
+		- String ID
+		- String pass
+		- Rented Book[5]
