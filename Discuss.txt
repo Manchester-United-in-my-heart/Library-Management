@@ -17,6 +17,7 @@ Mô tả: Xây dựng 1 trình quản lý thư viện
 			+ Member:
 				+ check own Account infor
 				+ search book
+				+ Mượn sách
 				+ trả sách
     - Class BookInShelf:
  	-Attribute: 
